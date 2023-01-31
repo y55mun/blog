@@ -24,6 +24,11 @@ function App() {
       </div>
 
       <button onClick={() => {
+        let copy2 = [...글제목];
+        글제목변경(copy2.sort());
+      }}>가나다순정렬</button>
+
+      <button onClick={() => {
         let copy = [...글제목];
         copy[0] = '여자 코트 추천'
         글제목변경(copy);

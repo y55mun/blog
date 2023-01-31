@@ -17,18 +17,19 @@ function App() {
   
   let [따봉, 따봉변경] = useState(0); // 따봉변경은 state 변경용 함수를 의미함
 
-  function changeDate() {
-    let copy = [...글제목]
-    copy[0] = '여자 코트 추천'
-    글제목변경(copy);
-  }
   return (
     <div className="App">
       <div className="black-nav">
         <div>개발 Blog</div>
       </div>
+
+      <button onClick={() => {
+        let copy = [...글제목];
+        copy[0] = '여자 코트 추천'
+        글제목변경(copy);
+      }}>글수정</button>
+
       <div className="list" >
-        <button onClick={changeDate}>변경</button>
         <h3> { 글제목[0] } <span onClick={ () => { 따봉변경( 따봉+1 ) } }>👍</span> { 따봉 } </h3>
         <p>2월 17일 발행</p>
         <hr/>
